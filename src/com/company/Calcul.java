@@ -37,11 +37,17 @@ public class Calcul {
                     left = stack.pop();
                     if (right == "0") throw new Exception("zero exception");
                     Integer r = (Integer.parseInt(left) / Integer.parseInt(right));
+                    stack.push(r.toString());
                     break;
                 }
-            }
+                    default: {
+                        stack.push(item);
+                        break;
+                    }
+                }
 
         }
+        if (stack.peek()=="") return "Error";
         return stack.pop();
     }
     public static boolean isNumeric(String str) {
