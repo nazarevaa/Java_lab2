@@ -19,4 +19,18 @@ class CalculTest {
         assertEquals("20",Calcul.calc(calculator(str)));
     }
 
+    @Test
+    void check3() throws Exception {
+        String str="fkroep/9";
+        Calcul  calc =new Calcul();
+        assertEquals("Error",Calcul.calc(calculator(str)));
+    }
+    @Test
+    void check4() {
+        String str="(345+45)/2";
+        Calcul  calc =new Calcul ();
+        assertNotEquals("6",calc.calculator(str));
+    }
+
+
 }
